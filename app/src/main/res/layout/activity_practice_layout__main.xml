@@ -14,4 +14,31 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="54dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nigels Button"
+        android:id="@+id/nige_button"
+        android:layout_above="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:layout_marginBottom="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Junes Views"
+        android:id="@+id/textView"
+        android:layout_above="@+id/nige_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="108dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="Testing Junes layout views"
+        android:layout_above="@+id/button"
+        android:layout_alignStart="@+id/button" />
 </RelativeLayout>

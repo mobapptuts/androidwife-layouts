@@ -40,9 +40,28 @@ public class PracticeLayout_MainActivity extends Activity {
                 buttonParams.setMargins(0, 0, 0, 54);
 
                 button.setLayoutParams(buttonParams);
+                // button.setId(button.generateViewId());
+                button.setId(R.id.june_button);
                 button.setText(R.string.button_name);
 
                 relativeLayout.addView(button);
+
+        Button nigelButton = new Button(this);
+        RelativeLayout.LayoutParams nigelParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        // nigelParams.addRule(RelativeLayout.ABOVE, button.getId());
+        nigelParams.addRule(RelativeLayout.ABOVE, R.id.june_button);
+        nigelParams.addRule(RelativeLayout.ALIGN_END, R.id.june_button);
+        nigelParams.setMargins(0, 0 , 0 , 54);
+        nigelButton.setLayoutParams(nigelParams);
+        nigelButton.setId(R.id.nigels_button);
+        nigelButton.setText("Nigels Button");
+
+        relativeLayout.addView(nigelButton);
+
     }
 
     @Override
