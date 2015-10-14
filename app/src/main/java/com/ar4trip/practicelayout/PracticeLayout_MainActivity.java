@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class PracticeLayout_MainActivity extends Activity {
 
@@ -56,13 +58,50 @@ public class PracticeLayout_MainActivity extends Activity {
         nigelParams.addRule(RelativeLayout.ABOVE, R.id.june_button);
         nigelParams.addRule(RelativeLayout.ALIGN_END, R.id.june_button);
         nigelParams.setMargins(0, 0 , 0 , 54);
+
         nigelButton.setLayoutParams(nigelParams);
         nigelButton.setId(R.id.nigels_button);
         nigelButton.setText("Nigels Button");
 
         relativeLayout.addView(nigelButton);
 
+        TextView juneView = new TextView(this);
+        RelativeLayout.LayoutParams juneTextParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        juneTextParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        juneTextParams.addRule(RelativeLayout.ABOVE, R.id.nigels_button);
+        juneTextParams.setMargins(0, 0, 0, 108);
+
+        juneView.setLayoutParams(juneTextParams);
+        juneView.setText("Junes Views");
+
+        relativeLayout.addView(juneView);
+
+
+        EditText juneEditText = new EditText(this);
+        RelativeLayout.LayoutParams juneEditTextParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        juneEditTextParams.addRule(RelativeLayout.ABOVE, R.id.june_button);
+        juneEditTextParams.addRule(RelativeLayout.ALIGN_START, R.id.june_button);
+
+        juneEditText.setLayoutParams(juneEditTextParams);
+        juneEditText.setHint("Testing Junes layout views");
+
+        relativeLayout.addView(juneEditText);
+
     }
+
+
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
